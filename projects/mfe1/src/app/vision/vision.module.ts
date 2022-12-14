@@ -1,11 +1,11 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { FlightsSearchComponent } from "./flights-search.component";
+import { VisionComponent } from "./vision.component";
 
 const FLIGHTS_ROUTES: Routes = [ { 
-    path: 'flights-search',
-    component: FlightsSearchComponent
+    path: '',
+    component: VisionComponent
 }];
 
 @NgModule({
@@ -14,7 +14,7 @@ const FLIGHTS_ROUTES: Routes = [ {
       RouterModule.forChild(FLIGHTS_ROUTES)
     ],
     declarations: [
-      FlightsSearchComponent
+      VisionComponent
     ]
   })
-  export class FlightsModule { }
+  export class VisionModule { }

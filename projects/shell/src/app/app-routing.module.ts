@@ -1,17 +1,33 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { ContentComponent } from './content/content.component';
+import { OnePagerComponent } from './one-pager/one-pager.component';
 
-// Full view: http://localhost:4200/flights/flights-search
 const routes: Routes = [
   {
     path: '',
-    component: AppComponent,
+    component: ContentComponent,
     pathMatch: 'full'
   },
   {
-    path: 'flights',
-    loadChildren: () => import('mfe1/Module').then(m => m.FlightsModule)
+    path: 'vision',
+    loadChildren: () => import('mfe1/Module').then(m => m.VisionModule)
+  },
+  {
+    path: 'one-pager',
+    component: OnePagerComponent,
+    children: [
+        {
+            path: '',
+            component: ContentComponent,
+            outlet: 'shell'
+        },
+        {
+            path: '',
+            loadChildren: () => import('mfe1/Module').then(m => m.VisionModule),
+            outlet: 'mfe1'
+        }
+    ]
   },
 ];
 

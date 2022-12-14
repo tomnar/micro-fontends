@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FlightsModule } from './flights/flights.module';
+import { VisionModule } from './vision/vision.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,7 @@ import { FlightsModule } from './flights/flights.module';
   ],
   imports: [
     BrowserModule,
-    FlightsModule,
+    VisionModule,
     AppRoutingModule
   ],
   providers: [],

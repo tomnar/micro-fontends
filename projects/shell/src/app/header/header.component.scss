@@ -1,0 +1,24 @@
+:host {
+    margin: -1rem;
+    display: block;
+    background-color: #a7d19c;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 5rem;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s all;
+
+    &:hover {
+        background-color: #37ab49;
+    }
+
+    &.active {
+        background-color: #2b8640;
+    }
+}
